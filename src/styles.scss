@@ -8,14 +8,135 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+// colors provided by the designers
+$color-page: #F0EFF4;
+$color-border: #e2e2e4;
+$color-text: #333333;
+$color-table-highlight: #FFFFFF;
+
+$color-blue-logo: #005598;
+
+$color-black: black;
+$color-white: white;
+
+$color-gray-deepdark: #333333; // #222
+$color-gray-darkest: #444444;
+$color-gray-darker: #555555;
+$color-gray-dark: #666666;
+$color-gray: #777777;
+$color-gray-light: #888888; //custom
+$color-gray-lighter: #999999; //custom
+$color-gray-lightest: #aaaaaa;
+$color-gray-bright: #bbbbbb;
+$color-gray-lowlight: #cccccc;
+$color-gray-highlight: #dddddd;
+$color-gray-border: #E5E5E5;
+
+$color-teal-darkest: #0f7b80;
+$color-teal-darker: #1d8d91;
+$color-teal-dark: #20a0a4;
+$color-teal: #059b9e;
+$color-teal-light: #2cc4c9;
+$color-teal-lighter: #32d0d5;
+$color-teal-lightest: #5adfe3;
+$color-teal-bright: #92f1f4;
+$color-teal-lowlight: #aefafc;
+$color-teal-highlight: #d2fbfc;
+
+$color-light-blue-darkest: #00698f;
+$color-light-blue-darker: #007fAD;
+$color-light-blue-dark: #0099d1;
+$color-light-blue: #00aeef;
+$color-light-blue-light: #12b3fc;
+$color-light-blue-lighter: #36c9ff;
+$color-light-blue-lightest: #66d4ff;
+$color-light-blue-bright: #8fdfff;
+$color-light-blue-lowlight: #b5e8fe;
+$color-light-blue-highlight: #ccf1fe;
+
+$color-dark-blue-darkest: #003c63;
+$color-dark-blue-darker: #024977;
+$color-dark-blue-dark: #005790;
+$color-dark-blue: #0062a2;
+$color-dark-blue-light: #076cb0;
+$color-dark-blue-lighter: #197bbd;
+$color-dark-blue-lightest: #3192d4;
+$color-dark-blue-bright: #5ebaf2;
+$color-dark-blue-lowlight: #96d7ff;
+$color-dark-blue-highlight: #bde6ff;
+
+$color-green-darkest: #269d4e;
+$color-green-darker: #2aab55;
+$color-green-dark: #2fbb5e;
+$color-green: #33cc66;
+$color-green-light: #36d76c;
+$color-green-lightest: #3ce374;
+$color-green-lowlight: #45f17f;
+$color-green-highlight: #56ff8f;
+
+$color-red-darkest: #bd3820;
+$color-red-darker: #cf3d23;
+$color-red-dark: #db4c32;
+$color-red: #ea6149;
+$color-red-light: #f57058;
+$color-red-lightest: #ff7f66;
+$color-red-lowlight: #ff8c75;
+$color-red-highlight: #ffa18f;
+$color-red-new: #F44343;
+
+$color-orange-darkest: #eb672f;
+$color-orange-darker: #f07630;
+$color-orange-dark: #f78731;
+$color-orange: #ff9933;
+$color-orange-light: #ffa733;
+$color-orange-lightest: #ffb433;
+$color-orange-lowlight: #ffc14d;
+$color-orange-highlight: #ffd36e;
+
+$color-yellow-darkest: #f7bc28;
+$color-yellow-darker: #f7c728;
+$color-yellow-dark: #ffde24;
+$color-yellow: #ffeb3b;
+$color-yellow-light: #ffef62;
+$color-yellow-lightest: #fff67d;
+$color-yellow-lowlight: #fff9a1;
+$color-yellow-highlight: #fffbc9;
+
+$color-font: #555;
+
+$stage-pill-color: #00549B;
+$task-pill-color: #19AAE4;
+$reource-precent-pill-color: $stage-pill-color;
+
+$color-success: $color-green;
+$color-warning: $color-orange;
+$color-danger: $color-red;
+$color-error: #F44343;
+
+
+$color-loading-shimmer: #f6f7f8;
+$to-do-unassigned: #E3E1E9;
+$to-do-review: #FFC200;
+
+$nodates-color: #0b2d4b;
+
+$planning-board-btn-blue: #24ace3;
+$planning-board-background: #0b2339;
+$planning-board-odd-row-background: #133d64;
+$planning-board-even-row-background: #0f3456;
+
+$SynergyTeal: ( 50: $color-teal-highlight, 100: $color-teal-lowlight, 200: $color-teal-bright, 300: $color-teal-lightest, 400: $color-teal-lighter, 500: $color-teal-light, 600: $color-teal, 700: $color-teal-dark, 800: $color-teal-darker, 900: $color-teal-darkest, contrast: ( 50: white, 100: white, 200: white, 300: white, 400: white, 500: white, 600: white, 700: white, 800: white, 900: white,));
+
+$SynergyRed: ( 50: $color-red-new, 100: $color-red-new, 200: $color-red-darkest, 300: $color-red-darker, 400: $color-red-dark, 500: $color-red, 600: $color-red-light, 700: $color-red-lightest, 800: $color-red-lowlight, 900: $color-red-highlight, contrast: ( 200: white, 300: white, 400: white, 500: white, 600: white, 700: white, 800: white, 900: white) );
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$theme-primary: mat.define-palette(mat.$indigo-palette);
-$theme-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$theme-primary: mat.define-palette($SynergyTeal, 600);
+$theme-accent: mat.define-palette($SynergyTeal, 600);
 
 // The warn palette is optional (defaults to red).
-$theme-warn: mat.define-palette(mat.$red-palette);
+$theme-warn: mat.define-palette($SynergyRed);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
