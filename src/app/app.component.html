@@ -1,5 +1,10 @@
 <button type="button" (click)="clicked()">Click me!</button>
 <div>{{message}}</div>
+<ng-container *ngFor="let item of items">
+  <app-child-testing 
+    [item]="item"
+    (onSelecteItem)="onSelectItem($event)"></app-child-testing>
+</ng-container>
 
 <!--
 <h3>Basic Buttons</h3>
